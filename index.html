@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vale Imobiliária</title>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Fonte do FontAwesome para ícones -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Cabeçalho fixo com menu -->
+    <header>
+        <div class="container">
+            <div class="logo">VALE IMOBILIÁRIA</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#properties">Imóveis</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de destaque inicial -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Encontre o imóvel dos seus sonhos</h1>
+            <p>Casas, apartamentos e terrenos nas melhores localizações com condições exclusivas.</p>
+            <button onclick="scrollToSection('properties')">Buscar Imóveis</button>
+        </div>
+    </section>
+
+    <!-- Carrossel de imagens -->
+    <section id="carousel">
+        <div class="carousel">
+            <!-- Cada item do carrossel -->
+            <div class="carousel-item active">
+                <img src="https://tuacasa.uol.com.br/wp-content/uploads/2019/06/fachadas-de-casas-simples-0.png" alt="Casa Moderna">
+                <div class="carousel-caption">Casa Moderna</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.homify.com/v1443654352/p/photo/image/960352/Imativa_Casa_Carrasco_0013.jpg" alt="Apartamento Luxuoso">
+                <div class="carousel-caption">Apartamento Luxuoso</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.fashionbubbles.com/wp-content/uploads/2024/01/fachadas-de-casas-modernas-luxuosas-destaque.jpg" alt="Terreno no Centro">
+                <div class="carousel-caption">Terreno no Centro</div>
+            </div>
+            <!-- Controles do carrossel -->
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Seção Imóveis -->
+    <section id="properties">
+        <div class="container">
+            <h2>Imóveis em Destaque</h2>
+            <!-- Filtros -->
+            <div class="filter-container">
+                <label for="property-type">Tipo:</label>
+                <select id="property-type">
+                    <option value="all">Todos</option>
+                    <option value="house">Casas</option>
+                    <option value="apartment">Apartamentos</option>
+                    <option value="land">Terrenos</option>
+                </select>
+                <label for="price-range">Preço Máx.:</label>
+                <select id="price-range">
+                    <option value="all">Todos</option>
+                    <option value="500000">R$ 500.000</option>
+                    <option value="1000000">R$ 1.000.000</option>
+                    <option value="2000000">R$ 2.000.000</option>
+                </select>
+                <button onclick="filterProperties()">Filtrar</button>
+            </div>
+            <!-- Lista de propriedades renderizadas dinamicamente -->
+            <div class="property-list" id="property-list"></div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Vale Imobiliária. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
