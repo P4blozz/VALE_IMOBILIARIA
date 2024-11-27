@@ -1,160 +1,266 @@
-/* Reseta estilos padrão */
-* {
+/* Reseta margens */
+body, h1, h2, h3, p, ul, li, a, input, select, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.6;
 }
 
-/* Estilos do cabeçalho */
-header {
-    background: #333;
-    color: #fff;
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Fundo de toda a página */
+body {
+    background-image: url('imagens/background.jpg');
+    background-size: cover;            /* Garante que a imagem cubra toda a área */
+    background-repeat: no-repeat;      /* Evita repetições da imagem */
+    background-attachment: fixed;      /* Faz com que o fundo permaneça fixo ao rolar a página */
+    background-position: center;       /* Centraliza a imagem */
+    margin: 0;                         /* Remove margens ao redor do corpo */
 }
-
-header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #f39c12;
-}
-
-/* Hero Section */
-.hero-section {
-    background: url('images/hero.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero-section button {
-    background: #f39c12;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.hero-section button:hover {
-    background: #e67e22;
-}
-
-/* Carrossel */
-.carousel {
-    position: relative;
-    max-width: 100%;
-    margin: 50px auto;
-    overflow: hidden;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.carousel-item {
-    display: none;
-    position: absolute;
-    width: 100%;
-}
-
-.carousel-item.active {
+/* Estilo para a logo */
+.logo img {
+    max-width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
     display: block;
 }
 
-.carousel img {
-    width: 100%;
-    border-radius: 5px;
+/* Header */
+header {
+    background: #ffffff;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    color: #4281d4;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url('https://via.placeholder.com/1920x600') no-repeat center/cover;
+    color: #fff;
+}
+
+.hero button {
+    background: #00a2ff;
+    color: #fff;
     border: none;
-    font-size: 2rem;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.carousel-control.prev {
-    left: 10px;
+.hero button:hover {
+    background: #38afff;
+}
+/* CARROSSEL */
+.carousel-inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    margin: 0px 0px 0px;
+    width: 300px;
+  }
+  
+  button {
+    margin-right: 10%;
+    position: relative;
+    display: flex;
+    top: -73px;
+  }
+  
+/* Formulário de busca */
+.busca {
+    padding: 2rem;
+    background: #42c2fd;
+    text-align: center;
 }
 
-.carousel-control.next {
-    right: 10px;
+.busca form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.carousel-control:hover {
-    background: rgba(0, 0, 0, 0.8);
+.busca input, .busca select, .busca button {
+    padding: 0.5rem;
 }
 
-/* Animação fadeIn */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Seção de Imóveis */
+.imoveis {
+    padding: 2rem;
+    /* background: #cdf3ff; */
+    text-align: center;
 }
 
+.imoveis .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.imovel {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.imovel:hover {
+    transform: translateY(-5px);
+}
+
+.imovel img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.imoveis h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+.imovel h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.imovel p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+
+/* Estilo para a seção de depoimentos */
+.depoimentos {
+    background: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .depoimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  .depoimentos h2{
+    font-size: 1rem;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .depoimento {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .depoimento-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .foto-cliente {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .avaliacao {
+    text-align: center;
+  }
+  
+  .avaliacao p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  .avaliacao span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .estrelas {
+    color: #ff6600;
+  }
+  
+  .estrelas i {
+    margin-right: 0.2rem;
+  }
+  
 /* Footer */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 2rem 1rem;
+}
+
+footer a {
+    color: #00b7ff;
+    text-decoration: none;
+}
+
+footer .socials a {
+    margin: 0 0.5rem;
 }
