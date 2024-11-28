@@ -58,57 +58,33 @@
     </button>
   </div>
 
-      <!-- Busca de Imóveis -->
-      <section id="busca" class="busca">
-        <h2>Busca Interativa</h2>
-        <form>
-          <input
-            type="text"
-            placeholder="Digite o local ou tipo de imóvel"
-            required
-          />
-          <select>
-            <option value="compra">Comprar</option>
-            <option value="aluguel">Alugar</option>
-          </select>
-          <button type="submit">Buscar</button>
-        </form>
-      </section>
+<!-- Busca de Imóveis -->
+<section id="busca" class="busca">
+  <h2>Busca Interativa</h2>
+  <form id="searchForm">
+    <div class="input-group">
+      <label for="cidade">Escolha a cidade:</label>
+      <select id="cidade" required>
+        <option value="">Selecione a cidade</option>
+        <option value="ipatinga">Ipatinga</option>
+        <option value="coronel_fabriciano">Coronel Fabriciano</option>
+        <option value="ipaba">Ipaba</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <label for="tipo">Escolha o tipo de imóvel:</label>
+      <select id="tipo" required>
+        <option value="">Selecione se deseja</option>
+        <option value="compra">Comprar</option>
+        <option value="aluguel">Alugar</option>
+      </select>
+    </div>
+    <button type="submit">Buscar</button>
+  </form>
 
-      <!-- Galeria de Imóveis -->
-      <section id="imoveis" class="imoveis">
-        <h2>Imóveis disponíveis em Ipatinga</h2>
-        <div class="galeria">
-          <div class="imovel">
-            <img
-              src="imagens/NovaEsperanca.jpg"
-              alt="Casa no bairro Nova Esperança"
-            />
-            <h3>Casa no Nova Esperança</h3>
-            <p>3 quartos, 2 banheiros, garagem para 2 carros.</p>
-            <p>R$ 450.000</p>
-          </div>
-          <div class="imovel">
-            <img
-              src="imagens/Bethania.jpg"
-              alt="Apartamento no Bethania"
-            />
-            <h3>Casa de luxo no bairro Bethânia</h3>
-            <p>2 quartos, 1 banheiro, condomínio com área de lazer.</p>
-            <p>R$ 300.000</p>
-          </div>
-          <div class="imovel">
-            <img
-              src="imagens/Manaain.jpg"
-              alt="Terreno na Manaain"
-            />
-            <h3>Casa no bairro Manaain</h3>
-            <p>Área de 450m², excelente localização.</p>
-            <p>R$ 200.000</p>
-          </div>
-        </div>
-      </section>
-
+  <!-- Exibição de imóveis -->
+  <div id="imoveisResultado" class="imoveis-resultado"></div>
+</section>
       <!-- Depoimentos -->
 <section id="depoimentos" class="depoimentos">
   <h2>O que nossos clientes dizem</h2>

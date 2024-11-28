@@ -14,12 +14,12 @@ body {
 
 /* Fundo de toda a página */
 body {
-    background-image: url('imagens/background.jpg');
-    background-size: cover;            /* Garante que a imagem cubra toda a área */
-    background-repeat: no-repeat;      /* Evita repetições da imagem */
-    background-attachment: fixed;      /* Faz com que o fundo permaneça fixo ao rolar a página */
-    background-position: center;       /* Centraliza a imagem */
-    margin: 0;                         /* Remove margens ao redor do corpo */
+  background-image: url('imagens/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
 }
 /* Estilo para a logo */
 .logo img {
@@ -30,15 +30,15 @@ body {
 
 /* Header */
 header {
-    background: #ffffff;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: #ffffff;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header .logo {
@@ -101,77 +101,146 @@ header nav a {
     top: -73px;
   }
   
-/* Formulário de busca */
-.busca {
-    padding: 2rem;
-    background: #42c2fd;
-    text-align: center;
+/* Estilos gerais para a seção de busca */
+#busca {
+  background-color: #f4f4f4;
+  padding: 40px;
+  margin-top: 0px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.busca form {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+/* Título da seção */
+#busca h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.busca input, .busca select, .busca button {
-    padding: 0.5rem;
+/* Estilos para o formulário */
+#busca form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os elementos */
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
 }
+
+/* Estilos para os campos de entrada */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #2564c4;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 80px; /* Adiciona espaço entre o botão e os campos */
+  width: 100%;
+  position: relative; /* Corrige qualquer posição relativa anterior */
+}
+
+button:hover {
+  background-color: #0b238f;
+}
+
+/* Exibição dos imóveis encontrados */
+#imoveisResultado {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#imoveisResultado .imovel {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#imoveisResultado .imovel h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+#imoveisResultado .imovel p {
+  color: #555;
+}
+
 
 /* Seção de Imóveis */
 .imoveis {
-    padding: 2rem;
-    /* background: #cdf3ff; */
-    text-align: center;
+  padding: 2rem;
+  text-align: center;
 }
 
 .imoveis .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+  display: flex; /* Define o layout como flexbox */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
+  gap: 1rem; /* Espaçamento entre os imóveis */
+  justify-content: center; /* Centraliza os imóveis horizontalmente */
 }
 
 .imovel {
-    background: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: left;
-    transition: transform 0.3s ease;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Define a largura dos imóveis */
+  text-align: left;
+  transition: transform 0.3s ease;
 }
 
 .imovel:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .imovel img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .imoveis h2 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  }
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .imovel h3 {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 .imovel p {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.5rem 0;
 }
 
 
