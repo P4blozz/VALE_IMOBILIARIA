@@ -204,3 +204,98 @@ footer a {
 footer .socials a {
   margin: 0 0.5rem;
 }
+/* Estilo para os cards de imóveis */
+.imoveis .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards na tela */
+  padding: 2rem 1rem;
+}
+
+.imovel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+  width: 300px; /* Largura fixa dos cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao passar o mouse */
+  overflow: hidden; /* Garante que elementos não ultrapassem o card */
+}
+
+.imovel:hover {
+  transform: scale(1.05); /* Aumenta o card levemente */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+.imovel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Garante que a imagem preencha o espaço proporcionalmente */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+/* Estilo para o título da seção */
+.imoveis h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.imovel h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.imovel p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.5rem 0 1rem;
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+.imovel .preco {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2564c4;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.imovel button {
+  display: block;
+  width: calc(100% - 2rem); /* Ocupa a largura total menos o padding */
+  margin: 0 auto 1rem;
+  padding: 10px;
+  background-color: #2564c4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.imovel button:hover {
+  background-color: #0b238f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .imoveis .galeria {
+      flex-direction: column; /* Cards ficam empilhados no mobile */
+      align-items: center;
+  }
+
+  .imovel {
+      width: 90%; /* Cards ocupam quase toda a largura da tela */
+  }
+}
+/* Filtro */
+
+
