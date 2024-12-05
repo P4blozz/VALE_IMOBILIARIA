@@ -1,20 +1,30 @@
 /* Reseta margens */
-body, h1, h2, h3, p, ul, li, a, input, select, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Fundo de toda a página */
 body {
-  background-image: url('imagens/background.jpg');
+  background-image: url("imagens/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -23,9 +33,9 @@ body {
 }
 /* Estilo para a logo */
 .logo img {
-    max-width: 80px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    display: block;
+  max-width: 80px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  display: block;
 }
 
 /* Header */
@@ -42,294 +52,155 @@ header {
 }
 
 header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 header nav a {
-    color: #4281d4;
-    text-decoration: none;
+  color: #4281d4;
+  text-decoration: none;
 }
 
 /* Hero */
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: url('https://via.placeholder.com/1920x600') no-repeat center/cover;
-    color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: url("https://via.placeholder.com/1920x600") no-repeat center/cover;
+  color: #fff;
 }
 
 .hero button {
-    background: #00a2ff;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
+  background: #00a2ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .hero button:hover {
-    background: #38afff;
+  background: #38afff;
 }
 /* CARROSSEL */
 .carousel-inner {
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .carousel-control-prev, .carousel-control-next {
-    margin: 0px 0px 0px;
-    width: 300px;
-  }
-  
-  button {
-    margin-right: 10%;
-    position: relative;
-    display: flex;
-    top: -73px;
-  }
-  
-/* Estilos gerais para a seção de busca */
-#busca {
-  background-color: #f4f4f4;
-  padding: 40px;
-  margin-top: 0px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Título da seção */
-#busca h2 {
-  font-size: 24px;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Estilos para o formulário */
-#busca form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Espaçamento entre os elementos */
-  max-width: 600px;
+  width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
-/* Estilos para os campos de entrada */
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-input, select {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.carousel-control-prev,
+.carousel-control-next {
+  margin: 0px 0px 0px;
+  width: 300px;
+  background-color: transparent !important;
+  border: none;
   outline: none;
-  transition: border-color 0.3s ease;
 }
 
 button {
-  padding: 12px 20px;
-  background-color: #2564c4;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 80px; /* Adiciona espaço entre o botão e os campos */
-  width: 100%;
-  position: relative; /* Corrige qualquer posição relativa anterior */
+  margin-right: 10%;
+  position: relative;
+  display: flex;
+  top: -73px;
 }
 
-button:hover {
-  background-color: #0b238f;
-}
-
-/* Exibição dos imóveis encontrados */
-#imoveisResultado {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#imoveisResultado .imovel {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-#imoveisResultado .imovel h3 {
-  font-size: 18px;
-  margin: 0;
-}
-
-#imoveisResultado .imovel p {
-  color: #555;
-}
-
-
-/* Seção de Imóveis */
-.imoveis {
-  padding: 2rem;
+/* Estilo para a seção de depoimentos */
+.depoimentos {
+  background: #f9f9f9;
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.imoveis .galeria {
-  display: flex; /* Define o layout como flexbox */
-  flex-wrap: wrap; /* Permite que os itens quebrem linha quando necessário */
-  gap: 1rem; /* Espaçamento entre os imóveis */
-  justify-content: center; /* Centraliza os imóveis horizontalmente */
+.depoimentos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 }
-
-.imovel {
-  background: #fff;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Define a largura dos imóveis */
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.imovel:hover {
-  transform: translateY(-5px);
-}
-
-.imovel img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.imoveis h2 {
-  font-size: 1.5rem;
-  color: #ffffff;
+.depoimentos h2 {
+  font-size: 1rem;
+  color: #000000;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
   text-align: center;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.imovel h3 {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+.depoimento {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.imovel p {
-  font-size: 0.9rem;
+.depoimento-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-cliente {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.avaliacao {
+  text-align: center;
+}
+
+.avaliacao p {
+  font-size: 1rem;
   color: #555;
   margin: 0.5rem 0;
 }
 
+.avaliacao span {
+  font-weight: bold;
+  color: #333;
+}
 
-/* Estilo para a seção de depoimentos */
-.depoimentos {
-    background: #f9f9f9;
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-  
-  .depoimentos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-  }
-  .depoimentos h2{
-    font-size: 1rem;
-    color: #000000;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .depoimento {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 350px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .depoimento-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .foto-cliente {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .avaliacao {
-    text-align: center;
-  }
-  
-  .avaliacao p {
-    font-size: 1rem;
-    color: #555;
-    margin: 0.5rem 0;
-  }
-  
-  .avaliacao span {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .estrelas {
-    color: #ff6600;
-  }
-  
-  .estrelas i {
-    margin-right: 0.2rem;
-  }
-  
+.estrelas {
+  color: #ff6600;
+}
+
+.estrelas i {
+  margin-right: 0.2rem;
+}
+
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
 footer a {
-    color: #00b7ff;
-    text-decoration: none;
+  color: #00b7ff;
+  text-decoration: none;
 }
 
 footer .socials a {
-    margin: 0 0.5rem;
+  margin: 0 0.5rem;
 }
